@@ -1,6 +1,6 @@
 {
   "/api/*": {
-    "target": "https://tp-web.herokuapp.com/",
+    "target": "https://web-pierre-hebinger-back.herokuapp.com/",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",

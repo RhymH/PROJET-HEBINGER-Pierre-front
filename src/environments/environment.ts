@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   articles_url: '/assets/mock/produits_mock.json',
-  api_url: 'https://tp-web.herokuapp.com/'
+  api_url: 'https://web-pierre-hebinger-back.herokuapp.com/'
 };
 
 /*
