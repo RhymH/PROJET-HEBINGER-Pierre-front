@@ -44,14 +44,6 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0"
   },
-  "scripts": {
-	"ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
     "engines": {
     "node": "v8.11.4",
     "npm": "5.8.0"
