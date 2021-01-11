@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Client} from '../client';
 import {Observable} from 'rxjs';
 import {ClientService} from '../client.service';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class LoginService {
 
     console.log("login data " + JSON.stringify(data));
 
-    return this.http.post<Client>('/api/login', data, httpOptions);
+    return this.http.post<Client>(environment.api_url + '/login', data, httpOptions);
 
   }
 }

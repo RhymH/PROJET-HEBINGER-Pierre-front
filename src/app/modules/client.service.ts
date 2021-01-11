@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Client} from './client';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,7 @@ export class ClientService {
       "&" + "civilite=" + client.civilite
     ;
 
-    return this.http.post<Client>('/api/register', data, httpOptions);
+    return this.http.post<Client>(environment.api_url + '/register', data, httpOptions);
 
   }
 
