@@ -2,10 +2,10 @@ export class Client {
   nom: string;
   prenom: string;
   adresse: string;
-  codepostal: number;
+  codepostal: string;
   ville: string;
   pays: string;
-  tel: number;
+  tel: string;
   mail: string;
   login: string;
   pass: string;
@@ -13,15 +13,20 @@ export class Client {
   civilite: string;
 
 
-  /*constructor(nom: string, prenom: string, adresse: string, codepostal: number, tel: number, mail: string, passwd: string) {
+  constructor() {
 
-    this.nom = nom;
-    this.prenom = prenom;
-    this.adresse = adresse;
-    this.codepostal = codepostal;
-    this.tel = tel;
-    this.mail = mail;
-    this.passwd = passwd;
+    this.nom = '';
+    this.prenom = '';
+    this.adresse = '';
+    this.codepostal = '';
+    this.ville = '';
+    this.pays = '';
+    this.tel = '';
+    this.mail = '';
+    this.login = '';
+    this.pass = '';
+    this.passwdConf = '';
+    this.civilite = '';
 
-  }*/
+  }
 }

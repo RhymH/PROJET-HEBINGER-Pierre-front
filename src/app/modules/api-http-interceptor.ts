@@ -19,7 +19,7 @@ constructor( private router: Router, private store :Store, private actions$: Act
 
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-  if (this.jwtToken != "") {
+  if (this.jwtToken != "" && !req.url.includes("login")) {
     req = req.clone({ setHeaders: { Authorization: `Bearer ${this.jwtToken}` }});
   }
 

@@ -1,5 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 body{
-  background-color: lightgray;
+  background-color: rgb(26, 26, 26);
+
 }
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary{
+  background-color: #79430e;
+  border-color: #79430e;
+}
+
+.btn-primary:hover{
+  background-color: #ffffff;
+  border-color: #232323;
+  color: black;
+}
+
+
+

@@ -22,4 +22,6 @@ export class RecapComponent implements OnInit {
     this.client = this.store.select(ClientState.getClient);
   }
 
+
+
 }

@@ -30,7 +30,7 @@ export class ClientService {
       "&" + "civilite=" + client.civilite
     ;
 
-    return this.http.post<Client>(environment.api_url + '/register', data, httpOptions);
+    return this.http.post<Client>(environment.api_url + 'register', data, httpOptions);
 
   }
 

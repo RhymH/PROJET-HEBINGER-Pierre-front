@@ -25,7 +25,7 @@ export class LoginService {
 
     console.log("login data " + JSON.stringify(data));
 
-    return this.http.post<Client>(environment.api_url + '/login', data, httpOptions);
+    return this.http.post<Client>(environment.api_url + 'login', data, httpOptions);
 
   }
 }

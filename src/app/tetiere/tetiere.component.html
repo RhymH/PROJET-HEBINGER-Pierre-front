@@ -1,46 +1,4 @@
-<!--<nav class="navbar-dark navbar-expand-lg bg-primary">
-  <div class="container">
-    <a class="navbar-brand" routerLink="/">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-tools.svg/768px-Circle-icons-tools.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      TP06</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/catalogue">Catalogue</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/cart">Panier
-            <span class="badge badge-pill badge-light">{{ArticlesNumber|async}}</span>
-
-          </a>
-
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/client">SignIn</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">Login</a>
-        </li>
-
-        <li *ngIf="client | async as thisclient" class="nav-item">
-          <a class="nav-link" routerLink="/recap">Compte</a>
-        </li>
-
-      </ul>
-    </div>
-
-
-
-
-
-  </div>
-</nav>-->
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,24 +8,43 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+      <a class="navbar-brand" routerLink="/">TheStore</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/catalogue">Catalogue</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" routerLink="/cart">Panier</a>
+
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+
       </ul>
 
-      <div *ngIf="client | async">
-        <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>
-      </div>
+
+
+      <form class="form-inline my-2 my-lg-0">
+        <span *ngIf="client | async; else notConnected">
+          <div class="btn-group" role="group">
+            <button class="btn btn-outline-dark my-2 my-lg-0" routerLink="/recap">Profile</button>
+            <button class="btn btn-outline-dark my-2 my-lg-0" (click)="disconnect()"><i class="fas fa-sign-out-alt"></i></button>
+          </div>
+        </span>
+
+        <ng-template #notConnected>
+          <div class="btn-group" role="group">
+            <button class="btn btn-outline-dark my-2 my-lg-0" routerLink="/login">Login</button>
+            <button class="btn btn-dark my-2 my-lg-0" routerLink="/client">Register</button>
+          </div>
+
+        </ng-template>
+      </form>
+
+
+
 
     </div>
 

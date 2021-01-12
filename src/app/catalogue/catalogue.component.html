@@ -1,4 +1,4 @@
-
+<br><br>
 <div class="container catalogue">
 
   <br>
@@ -6,7 +6,7 @@
   <div class="container">
     <div class="input-group mb-3">
       <div ngbDropdown class="input-group-prepend">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sortMenu" ngbDropdownToggle>{{categorie_entre}}</button>
+        <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sortMenu" ngbDropdownToggle>{{categorie_entre}}</button>
         <div class="dropdown-menu" aria-labelledby="sortMenu">
           <button class="dropdown-item" *ngFor="let categorie_entre of categories" (click)="ChangeSortOrder(categorie_entre)" >{{categorie_entre}}</button>
         </div>
@@ -25,9 +25,8 @@
 
     </div>
   </div>
-  <br>
 
-  <div class="container">
+  <!--<div class="container">
     <table class="table">
       <thead class="thead-dark">
       <tr>
@@ -50,11 +49,33 @@
       </tr>
       </tbody>
     </table>
+  </div>-->
+
+
+</div>
+
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of articles | async" class="card-custom col-md-4">
+
+      <div class="card-img-top-custom" style="background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;"></div>
+      <div class="card-bottom-custom">
+
+
+        <h2>{{ item.nom }}</h2>
+        <p>{{ item.categorie }}</p>
+        <p>{{ item.prix }}€</p>
+
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-light" (click)="OnClick(item)" >Ajouter <i class="fas fa-cart-arrow-down"></i></button>
+          <button class="btn btn-outline-light" [routerLink]="['/details/',item.nom]"><i class="far fa-file-alt"></i></button>
+        </div>
+      </div>
+    </div>
+
+
   </div>
-
-
-
-
-  <br>
-
-  </div>
+</div>

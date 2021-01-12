@@ -6,6 +6,8 @@ import { Store } from "@ngxs/store";
 import {ClientService} from '../modules/client.service';
 import {Client} from '../modules/client';
 import {ClientState} from '../modules/states/client-state';
+import {Router} from '@angular/router';
+import {CreateClient, DeleteClient} from '../modules/actions/client-action';
 
 
 @Component({
@@ -15,7 +17,7 @@ import {ClientState} from '../modules/states/client-state';
 })
 export class TetiereComponent implements OnInit {
 
-  constructor(private store: Store, private clientService: ClientService) { }
+  constructor(private store: Store, private clientService: ClientService, private router:Router) { }
 
   client :Observable<Client>;
 
@@ -28,4 +30,9 @@ export class TetiereComponent implements OnInit {
 
   listArticles: Observable<Articles>;
 
+
+  disconnect() {
+    this.store.dispatch(new CreateClient(new Client()));
+    this.router.navigate(["/"]);
+  }
 }
