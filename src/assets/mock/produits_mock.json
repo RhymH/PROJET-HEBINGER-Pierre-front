@@ -1,6 +1,6 @@
 [
   {"nom":"Fender Squier Bullet", "details": "Fender Squier Bullet Strat HT HSS IBK",        "categorie": "Fender", "prix": "129.00", "image":  "https://im.static-thomann.de/pics/bdb/444290/13855836_800.jpg"},
-  {"nom":"Harley Benton ST-20 SB", "details": "Harley Benton ST-20 SB Standard Series",        "categorie": "Harley Benton", "prix": "79.00", "image":  "https://im.static-thomann.de/pics/bdb/153578/13234666_800.jpg"},
+  {"nom":"Harley Benton ST-20 SB", "details": "Harley Benton ST-20 SB Standard Series",     "categorie": "Harley Benton", "prix": "79.00", "image":  "https://im.static-thomann.de/pics/bdb/153578/13234666_800.jpg"},
   {"nom":"Harley Benton Amarok-6", "details": "Harley Benton Amarok-6 BKBL Flame Burst",    "categorie": "Harley Benton", "prix": "498.00", "image":  "https://im.static-thomann.de/pics/bdb/479364/14983725_800.jpg"},
   {"nom":"PRS SE Standard 24 VC", "details": "PRS SE Standard 24 VC",                       "categorie": "PRS", "prix": "577.00", "image":  "https://im.static-thomann.de/pics/bdb/425649/13653071_800.jpg"},
   {"nom":"Jackson JS22 Dinky BLK", "details": "Jackson JS22 Dinky BLK AH",                  "categorie": "Jackson", "prix": "204.00", "image":  "https://im.static-thomann.de/pics/bdb/455983/13890416_800.jpg"},
@@ -13,8 +13,5 @@
   {"nom":"PRS Custom 24 35th Anniv. VJ", "details": "PRS Custom 24 35th Anniv. VJ",         "categorie": "PRS", "prix": "4.333.00", "image":  "https://im.static-thomann.de/pics/bdb/495277/15285023_800.jpg"},
   {"nom":"PRS Hollowbody II BW", "details": "PRS Hollowbody II BW",                         "categorie": "PRS", "prix": "5.111.00", "image":  "https://im.static-thomann.de/pics/bdb/470220/14437159_800.jpg"},
   {"nom":"Harley Benton ST-20 HSS SBK", "details": "Harley Benton ST-20HSS SBK Standard Series - La mienne :P", "categorie": "Harley Benton", "prix": "88.00", "image":  "https://im.static-thomann.de/pics/bdb/449491/14644821_800.jpg"}
-
-
-
 
 ]
