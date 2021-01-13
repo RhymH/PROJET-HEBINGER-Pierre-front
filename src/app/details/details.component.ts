@@ -26,11 +26,11 @@ export class DetailsComponent implements OnInit {
   }
 
   OnClick(item: Articles) {
-    this.addArticle(item.nom, item.categorie, item.prix);
+    this.addArticle(item.nom, item.details, item.categorie, item.prix, item.image);
   }
 
-  addArticle(nom: string, categorie: string, prix: string) {
-    this.store.dispatch(new AddArticles({ nom, categorie, prix }));
+  addArticle(nom: string, details:string, categorie: string, prix: string, image: string) {
+    this.store.dispatch(new AddArticles({ nom, details, categorie, prix, image }));
 
   }
 }

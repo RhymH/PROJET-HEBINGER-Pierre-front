@@ -19,7 +19,7 @@ export class CatalogueComponent implements OnInit {
   categorie_entre_vide = 'Tout afficher';
   categorie_entre: string = this.categorie_entre_vide;
 
-  categories: string[] = ['musique', 'construction', 'figurines', 'peluche', this.categorie_entre_vide];
+  categories: string[] = ['Fender', 'Harley Benton', 'PRS', 'Jackson', 'Ibanez', this.categorie_entre_vide];
 
   articles: Observable<Articles[]>;
 
@@ -47,11 +47,10 @@ export class CatalogueComponent implements OnInit {
   }
 
   OnClick(item: Articles) {
-    this.addArticle(item.nom, item.categorie, item.prix);
+    this.addArticle(item.nom, item.details, item.categorie, item.prix, item.image);
   }
 
-  addArticle(nom: string, categorie: string, prix: string) {
-    this.store.dispatch(new AddArticles({ nom, categorie, prix }));
-
+  addArticle(nom: string, details: string, categorie: string, prix: string, image: string) {
+    this.store.dispatch(new AddArticles({ nom, details, categorie, prix, image }));
   }
 }

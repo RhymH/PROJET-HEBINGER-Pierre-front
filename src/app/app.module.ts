@@ -22,6 +22,7 @@ import {LoginModule} from './login/login.module';
 import {ApiHttpInterceptor} from './modules/api-http-interceptor';
 import {JwtState} from './modules/states/jwt-state';
 import {ClientState} from './modules/states/client-state';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({

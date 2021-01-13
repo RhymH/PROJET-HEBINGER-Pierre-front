@@ -8,3 +8,8 @@ export class DelArticles {
   static readonly type = '[Articles] Del';
   constructor(public payload: Articles) {}
 }
+
+export class DelAllArticles {
+  static readonly type = '[Articles] Del';
+  constructor() {}
+}

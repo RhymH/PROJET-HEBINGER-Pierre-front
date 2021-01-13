@@ -1,6 +1,6 @@
 import { NgxsModule, Action, Selector, State, StateContext } from '@ngxs/store';
 import { ArticlesStateModel } from './articles-state-models';
-import { AddArticles, DelArticles } from '../actions/article-action';
+import {AddArticles, DelAllArticles, DelArticles} from '../actions/article-action';
 
 @State<ArticlesStateModel>({
   name: 'listArticles',
@@ -34,10 +34,21 @@ export class ArticlesState {
   ) {
     const state = getState();
     patchState({
-      // supprimer le payload dans users
+      // supprimer le payload
       articles: state.articles.filter(
         item => item.nom !== payload.nom
       )
+    });
+  }
+
+  @Action(DelAllArticles)
+  delAll(
+    { getState, patchState }: StateContext<ArticlesStateModel>,
+    { }: DelAllArticles
+  ) {
+    const state = getState();
+    patchState({
+      articles: []
     });
   }
 }

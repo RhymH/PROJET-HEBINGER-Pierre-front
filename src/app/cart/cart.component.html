@@ -11,7 +11,6 @@
       <th scope="col">Catégorie</th>
       <th scope="col">Prix</th>
       <th scope="col"></th>
-      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -19,9 +18,25 @@
       <td rootLink>{{ item.nom }}</td>
       <td>{{ item.categorie }}</td>
       <td>{{ item.prix }}</td>
-      <td><button class="btn btn-outline-danger" (click)="OnClick(item)" >Retirer</button></td>
-      <td><button class="btn btn-primary" [routerLink]="['/details/',item.nom]">Détails</button></td>
+      <td>
+
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-danger" (click)="OnClick(item)" ><i class="far fa-trash-alt"></i></button>
+          <button class="btn btn-dark" [routerLink]="['/details/',item.nom]"><i class="far fa-file-alt"></i></button>
+        </div>
+      </td>
     </tr>
     </tbody>
   </table>
+</div>
+<br>
+<div class="container cart" style="text-align: center;">
+  <br>
+
+  <p>{{ArticlesNumber|async}} Articles</p>
+  <br>
+
+  <button class="btn btn-primary" (click)="OnBuy()" [routerLink]="['/']">Valider Commande</button>
+  <br>
+  <br>
 </div>

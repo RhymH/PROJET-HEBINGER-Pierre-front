@@ -61,7 +61,7 @@
   <div class="row">
     <div *ngFor="let item of articles | async" class="card-custom col-md-4">
 
-      <div class="card-img-top-custom" style="background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;"></div>
+      <div class="card-img-top-custom" style="background: url({{item.image}}) center/cover no-repeat;"></div>
       <div class="card-bottom-custom">
 
 
@@ -79,3 +79,21 @@
 
   </div>
 </div>
+
+
+<div style="position: absolute; bottom: 1em; right: 2em;">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000">
+  <div class="toast-header">
+    <strong class="mr-auto">TheStore</strong>
+    <small class="text-muted">Info</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    L'article a été ajouté au panier
+  </div>
+</div>
+</div>
+
+<script>$('.toast').toast('show')</script>
