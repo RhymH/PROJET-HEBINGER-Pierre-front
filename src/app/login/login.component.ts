@@ -26,14 +26,16 @@ export class LoginComponent implements OnInit {
       this.loginService.postClient(model).subscribe(
         result => {
           this.store.dispatch(new CreateClient(result));
+          this.router.navigate(['home']);
         }
         ,
         error => {
-          alert("connexion refusée compte inconnu\n" + JSON.stringify(error));
+          alert("connexion refusée compte inconnu");
+          //alert("connexion refusée compte inconnu\n" + JSON.stringify(error));
         }
       );
 
-      this.router.navigate(['home']);
+
     }
     console.log("envoie" + isValid);
 

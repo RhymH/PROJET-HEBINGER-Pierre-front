@@ -8,10 +8,10 @@
 <!--    <p>{{(this.obsclient | async).nom}} </p>-->
 <!--    <p>{{(this.obsclient | async).prenom}} </p>-->
 
-    <input type="text" id="lastname" class="form-control" name="nom" placeholder="nom" [ngModel]="client.nom"
+    <input type="text" id="lastname" class="form-control" name="nom" placeholder="nom" [ngModel]="client.nom" pattern="[a-zA-Z0-9]{1,20}"
            required #lastname="ngModel" [ngClass]="!f.submitted ? '' : lastname.valid ? 'is-valid' : 'is-invalid'">
 
-    <input type="text" id="firstname" class="form-control" name="prenom" placeholder="prenom" [ngModel]="client.prenom"
+    <input type="text" id="firstname" class="form-control" name="prenom" placeholder="prenom" [ngModel]="client.prenom" pattern="[a-zA-Z0-9]{1,20}"
            required #firstname="ngModel" [ngClass]="!f.submitted ? '' : firstname.valid ? 'is-valid' : 'is-invalid'">
 
 
@@ -19,9 +19,9 @@
            required #adress="ngModel" [ngClass]="!f.submitted ? '' : adress.valid ? 'is-valid' : 'is-invalid'">
     <input type="text" id="postal" class="form-control" name="postal" placeholder="codepostal" pattern="[0-9]{5}" [ngModel]="client.codepostal"
            required #postal="ngModel" [ngClass]="!f.submitted ? '' : postal.valid ? 'is-valid' : 'is-invalid'">
-    <input type="text" id="city" class="form-control" name="ville" placeholder="ville" [ngModel]="client.ville"
+    <input type="text" id="city" class="form-control" name="ville" placeholder="ville" [ngModel]="client.ville" pattern="[a-zA-Z0-9]{1,20}"
            required #city="ngModel" [ngClass]="!f.submitted ? '' : city.valid ? 'is-valid' : 'is-invalid'">
-    <input type="text" id="country" class="form-control" name="pays" placeholder="pays" [ngModel]="client.pays"
+    <input type="text" id="country" class="form-control" name="pays" placeholder="pays" [ngModel]="client.pays" pattern="[a-zA-Z0-9]{1,20}"
            required #country="ngModel" [ngClass]="!f.submitted ? '' : country.valid ? 'is-valid' : 'is-invalid'">
 
     <div>
@@ -64,11 +64,22 @@
 
 
     <br>
-    <input type="text" id="login" class="form-control" name="login" placeholder="login" [ngModel]="client.login"
-           required #login="ngModel" [ngClass]="!f.submitted ? '' : login.valid ? 'is-valid' : 'is-invalid'">
     <div>
-      <input type="password" id="password" class="form-control" name="pass" placeholder="mot de passe" [ngModel]="client.pass"
+      <input type="text" id="login" class="form-control" name="login" placeholder="login" [ngModel]="client.login" pattern="[a-zA-Z0-9]{1,20}"
+             required #login="ngModel" [ngClass]="!f.submitted ? '' : login.valid ? 'is-valid' : 'is-invalid'">
+      <div class="invalid-feedback">
+        Logn contitent des carracteres invalides
+      </div>
+    </div>
+    <div>
+      <input type="password" id="password" class="form-control" name="pass" placeholder="mot de passe" [ngModel]="client.pass" pattern="[a-zA-Z0-9]{1,20}"
              required #password="ngModel" [ngClass]="!f.submitted ? '' : password.valid ? 'is-valid' : 'is-invalid'">
+      <div class="invalid-feedback">
+        Mot de passe contitent des carracteres invalides
+      </div>
+    </div>
+
+    <div>
       <input type="password" id="passwordconf" class="form-control" name="passwdConf" placeholder="mot de passe confirmation" [ngModel]="client.passwdConf"
              required validateEqual="password" #confirmPassword="ngModel" [ngClass]="!f.submitted ? '' : confirmPassword.valid ? 'is-valid' : 'is-invalid'">
       <div class="invalid-feedback">
