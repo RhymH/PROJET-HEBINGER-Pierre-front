@@ -10,6 +10,6 @@ export class DelArticles {
 }
 
 export class DelAllArticles {
-  static readonly type = '[Articles] Del';
+  static readonly type = '[Articles] DelAll';
   constructor() {}
 }
